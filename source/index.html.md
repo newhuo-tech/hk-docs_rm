@@ -1,5 +1,5 @@
 ---
-title: 火币 API 文档-1111111
+title: 火币 API 文档
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - json
@@ -11,7 +11,7 @@ includes:
 search: true
 ---
 
-# 更新日志122
+# 更新日志
 
 <style>
 table {
