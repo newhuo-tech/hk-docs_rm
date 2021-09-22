@@ -11,7 +11,7 @@ includes:
 search: true
 ---
 
-# 1更新日志
+# 更新日志
 
 <style>
 table {
