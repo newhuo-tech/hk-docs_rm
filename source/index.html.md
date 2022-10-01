@@ -1,11 +1,11 @@
 ---
-title: Huobi API Reference v1.0
+title: New Huo API Reference v1.0
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - json
 
 toc_footers:
-  - <a href='https://www.huobi.pro/apikey/'>Sign Up for a Huobi API key </a>
+  - <a href='https://www.huobi.pro/apikey/'>Sign Up for a New Huo API key </a>
   - Login is required for creating an API key
 
 includes:
@@ -143,7 +143,7 @@ table th {
 | 2019.06.05 20:00         | All APIs that need authentication                            | Update          | Set up 3 permission for API Key: Read, Trade and Withdraw    |
 | 2019.06.10 00:00         | `GET /v1/order/orders`<br />`GET /v1/order/matchresults`     | Update          | Adjusted query window as 48 hours                            |
 | 2019.05.15 10:00         | `POST /v1/futures/transfer`                                  | New             | Allow a user to tranfer fund between spot account and future contract account. |
-| 2019.04.29 19:00         | `GET /v1/order/history`                                      | New             | Support historical order querying within 48 hours. With the launching of this new endpoint, the existing REST endpoint “v1/order/orders” will be kept in service. However, the new endpoint “/v1/order/history” will have better service level than the “/v1/order/orders”, especially when the service loading exceeds the threshold of our system, which means in some extremely cases, “v1/order/orders” would become unavailable, but “/v1/order/history” would be kept alive. Meanwhile, Huobi is planning to have a delegated data service to support users’ demands on long-term history data. Once this new service become available, the “v1/order/orders” will be deprecated. We will keep you informed promptly once the timeline determined. |
+| 2019.04.29 19:00         | `GET /v1/order/history`                                      | New             | Support historical order querying within 48 hours. With the launching of this new endpoint, the existing REST endpoint “v1/order/orders” will be kept in service. However, the new endpoint “/v1/order/history” will have better service level than the “/v1/order/orders”, especially when the service loading exceeds the threshold of our system, which means in some extremely cases, “v1/order/orders” would become unavailable, but “/v1/order/history” would be kept alive. Meanwhile, New Huo is planning to have a delegated data service to support users’ demands on long-term history data. Once this new service become available, the “v1/order/orders” will be deprecated. We will keep you informed promptly once the timeline determined. |
 | 2019.04.17 10:00         | `GET /v1/order/orders`                                       | Update          | Add clarification on the value range for start-date in documents |
 | 2019.04.16 10:00         | `GET /v1/order/openOrders`                                   | Update          | Correct the documents error. Both account-id and symbol are required |
 | 2019.01.17 07:00         | Websocket accounts                                           | Update          | Add subscription parameter model<br>Subscription does not return frozen balance of sub-user anymore |
@@ -155,9 +155,9 @@ table th {
 
 # Introduction
 
-Welcome to Huobi API！  
+Welcome to New Huo API！  
 
-This is the official Huobi API document, and will be continue updating. Huobi will also publish API announcement in advance for any API change. Please subscribe to our announcements so that you can get the latest updates.
+This is the official New Huo API document, and will be continue updating. New Huo will also publish API announcement in advance for any API change. Please subscribe to our announcements so that you can get the latest updates.
 
 You can click <a href='https://huobiglobal.zendesk.com/hc/en-us/sections/360000070201-API-Announcements'>Here</a> to view the announcements. If you want to subscribe, please click "Follow" button in the top right of the page. After login and click "Follow" again, then choose the type you want to follow. After you subscribe, the button will be changed to "Following". If you don't have any account, you need to register first in the login dialog.
 
@@ -170,7 +170,7 @@ Below is the content for Spot API document
 
 The first part is the overview:
 
-- **Quick Start**: It introduces the overall knowledge of Huobi API, and suitability for new Huobi API user
+- **Quick Start**: It introduces the overall knowledge of New Huo API, and suitability for new New Huo API user
 - **API Explorer**: It introduces the API Explorer online tool, which is convenient for user to invoke and observe the API
 - **FAQ**: It lists the frequently asked questions regardless the specific API
 - **Contact Us**: It introduces how to contact us according to different subjects
@@ -186,7 +186,7 @@ The second part is detail for each API. Each API category is listed in one secti
 
 ## Preparation
 
-Before you use API, you need to login the website to create API Key with proper permissions. The API key is shared for all instruments in Huobi including spot, futures, swap, options.
+Before you use API, you need to login the website to create API Key with proper permissions. The API key is shared for all instruments in New Huo including spot, futures, swap, options.
 
 You can manage your API Keys <a href='https://www.hbg.com/zh-cn/apikey/'>here</a>.
 
@@ -206,7 +206,7 @@ Please remember below information after creation:
 The API Key can bind maximum 20 IP addresses (either host IP or network IP), we strongly suggest you bind IP address for security purpose. The API Key without IP binding will be expired after 90 days.
 </aside>
 <aside class="warning">
-<red><b>Warning</b></red>: These two keys are important to your account safety, please don't share <b>both</b> of them together to anyone else (including any product or person from Huobi). If you find your API Key is disposed, please remove it immediately.
+<red><b>Warning</b></red>: These two keys are important to your account safety, please don't share <b>both</b> of them together to anyone else (including any product or person from New Huo). If you find your API Key is disposed, please remove it immediately.
 </aside> 
 
 
@@ -283,10 +283,10 @@ In general, the domain <u>api-aws.huobi.pro</u> is optimized for AWS client, the
 Please initiate API calls with non-China IP.
 </aside>
 <aside class="notice">
-It is not recommended to use proxy to access Huobi API because it will introduce high latency and low stability.
+It is not recommended to use proxy to access New Huo API because it will introduce high latency and low stability.
 </aside>
 <aside class="notice">
-It is recommended to access Huobi API from AWS Japan for better stability. If your server is in China mainland, it may be not stable.
+It is recommended to access New Huo API from AWS Japan for better stability. If your server is in China mainland, it may be not stable.
 </aside> 
 
 ## Authentication
@@ -521,7 +521,7 @@ The types include:
 * minepool: Minepool account
 * etf: ETF account
 
-You can refer to <a href='https://www.huobi.com/en-us/guide/'>Huobi Course</a> to get detailed information
+You can refer to <a href='https://www.huobi.com/en-us/guide/'>New Huo Course</a> to get detailed information
 
 # API Access
 
@@ -809,10 +809,10 @@ It indicates the request path doesn't exist, please check the path spelling care
 
 ## Market Maker Program
 
-It is very welcome for market maker who has good market making strategy and large trading volume. If your Huobi Spot account or Contract account has at least 10 BTC, you can send your email to:
+It is very welcome for market maker who has good market making strategy and large trading volume. If your New Huo Spot account or Contract account has at least 10 BTC, you can send your email to:
 
-- [MM_service@huobi.com](mailto:MM_service@huobi.com) for Huobi Global (spot / leverage) market maker
-- [dm_mm@huobi.com](mailto:dm_mm@huobi.com) for Huobi Contract market maker
+- [MM_service@huobi.com](mailto:MM_service@huobi.com) for New Huo Global (spot / leverage) market maker
+- [dm_mm@huobi.com](mailto:dm_mm@huobi.com) for New Huo Contract market maker
 
 And provide below details:
 
@@ -828,7 +828,7 @@ Market makers will not be able to use point cards, VIP rate, rebate or any other
 
 If you have any other questions on API, you can contact us by below ways:
 
-- Join official **QQ** group (Huobi Global Spot API, **1160839820**). Please tell your UID and programming language in your join request, and you can join the group after the group administrator has approved it.
+- Join official **QQ** group (New Huo Global Spot API, **1160839820**). Please tell your UID and programming language in your join request, and you can join the group after the group administrator has approved it.
 - Contact customer support from Help Center or send email to [support@huobigroup.com](mailto:support@huobigroup.com).
 
 If you encounter API errors, please use below template in your feedback:
@@ -887,7 +887,7 @@ No parameter is available for this endpoint.
 {
   "page": {  // Basic information of huobi spot status page
     "id": "p0qjfl24znv5",  // page id
-    "name": "Huobi",  // page name
+    "name": "New Huo",  // page name
     "url": "https://status.huobigroup.com", // page url
     "time_zone": "Etc/UTC", // time zone
     "updated_at": "2020-02-07T10:25:14.717Z" // page update time
@@ -1106,7 +1106,7 @@ None.
 
 ## Get all Supported Trading Symbol
 
-This endpoint returns all Huobi's supported tradable symbols.
+This endpoint returns all New Huo's supported tradable symbols.
 
 ```shell
 curl "https://api.huobi.pro/v1/common/symbols"
@@ -1186,7 +1186,7 @@ No parameter is needed for this endpoint.
 
 ## Get all Supported Currencies
 
-This endpoint returns all Huobi's supported tradable currencies.
+This endpoint returns all New Huo's supported tradable currencies.
 
 ```shell
 curl "https://api.huobi.pro/v1/common/currencys"
@@ -1229,7 +1229,7 @@ curl "https://api.huobi.pro/v2/reference/currencies?currency=usdt"
 
 | Field Name     | Mandatory | Data Type | Description     | Value Range                                                  |
 | -------------- | --------- | --------- | --------------- | ------------------------------------------------------------ |
-| currency       | false     | string    | Currency        | btc, ltc, bch, eth, etc ...(available currencies in Huobi Global) |
+| currency       | false     | string    | Currency        | btc, ltc, bch, eth, etc ...(available currencies in New Huo Global) |
 | authorizedUser | false     | boolean   | Authorized user | true or false (if not filled, default value is true)         |
 
 > Response:
@@ -2197,10 +2197,10 @@ Note 1:<br>
 - A paid maker rebate could possibly include rebate from multiple trades.<br>
 
 Note 2:<br>
-Only when the number of items within the query window (between “start-time” and ”end-time”) exceeded the page limitation (defined by “size”), Huobi server returns “next-id”. Once received “next-id”, API user should –<br>
+Only when the number of items within the query window (between “start-time” and ”end-time”) exceeded the page limitation (defined by “size”), New Huo server returns “next-id”. Once received “next-id”, API user should –<br>
 
 1) Be aware of that, some items within the query window were not returned due to the page size limitation.<br>
-2) In order to get these items from Huobi server, adopt the “next-id” as “from-id” and submit another request, with other request parameters no change.<br>
+2) In order to get these items from New Huo server, adopt the “next-id” as “from-id” and submit another request, with other request parameters no change.<br>
 3) As database record ID, “next-id” and “from-id” are for recurring query purpose and the ID itself does not have any business implication.<br>
 
 Note 3:<br>
@@ -2590,9 +2590,9 @@ endTime default value: current time
 | nextId       | integer   | FALSE     | First record ID in next page (only valid if exceeded page size. please refer to note 3.) |                                                              |
 
 Note 3:<br>
-Only when the number of items within the query window (between “startTime” and ”endTime”) exceeded the page limitation (defined by “limit”), Huobi server returns “nextId”. Once received “nextId”, API user should –<br>
+Only when the number of items within the query window (between “startTime” and ”endTime”) exceeded the page limitation (defined by “limit”), New Huo server returns “nextId”. Once received “nextId”, API user should –<br>
 1)	Be aware of that, some items within the query window were not returned due to the page size limitation.<br>
-2)	In order to get these items from Huobi server, adopt the “nextId” as “fromId” and submit another request, with other request parameters no change.<br>
+2)	In order to get these items from New Huo server, adopt the “nextId” as “fromId” and submit another request, with other request parameters no change.<br>
 3)	As database record ID, “nextId” and “fromId” are for recurring query purpose and the ID itself does not have any business implication.<br>
 
 
@@ -2686,7 +2686,7 @@ Transferring from a spot account to a contract account, the type is pro-to-futur
 Via this endpoint, user should be able to query ‘termless’ point’s balance, as well as ‘terminable’ point’s balance including its group IDs and individual expiration date.<br>
 Via this endpoint, user could only query point’s balance instead of any other cryptocurrency’s balance.<br>
 Via this endpoint, parent user could query either parent user’s point balance, or sub user’s point balance.<br>
-User can only exchange Huobi point via Huobi official web or app.<br>
+User can only exchange New Huo point via New Huo official web or app.<br>
 
 API Key Permission：Read<br>
 Rate Limit: 2times/s<br>
@@ -2982,9 +2982,9 @@ This endpoint allows parent user to query withdraw address available for API key
 | nextId     | false     | long      | First record ID in next page (only valid if exceeded page size) |             |
 
 Note:<br>
-Only when the number of items within the query window exceeded the page limitation (defined by “limit”), Huobi server returns “nextId”. Once received “nextId”, API user should –<br>
+Only when the number of items within the query window exceeded the page limitation (defined by “limit”), New Huo server returns “nextId”. Once received “nextId”, API user should –<br>
 1) Be aware of that, some items within the query window were not returned due to the page size limitation.<br>
-2) In order to get these items from Huobi server, adopt the “nextId” as “fromId” and submit another request, with other request parameters no change.<br>
+2) In order to get these items from New Huo server, adopt the “nextId” as “fromId” and submit another request, with other request parameters no change.<br>
 3) “nextId” and “fromId” are for recurring query purpose and the ID itself does not have any business implication.<br>
 
 
@@ -2995,7 +2995,7 @@ Rate Limit (NEW): 20times/2s
 
 Parent user creates a withdraw request from spot account to an external address (exists in your withdraw address list), which doesn't require two-factor-authentication.
 
-<aside class="notice">If user has chosen fast withdraw preferred in  <a href='https://www.hbg.com/en-us/user_center/uc_setting/'>settings </a>, the withdraw requests submitted via this endpoint would choose 'fast withdraw' as preferred channel. It means if the withdraw address is managed by Huobi, the withdraw transfer is not on-chain, and then the transaction hash (tx-hash) field will be empty in withdraw record.</aside>
+<aside class="notice">If user has chosen fast withdraw preferred in  <a href='https://www.hbg.com/en-us/user_center/uc_setting/'>settings </a>, the withdraw requests submitted via this endpoint would choose 'fast withdraw' as preferred channel. It means if the withdraw address is managed by New Huo, the withdraw transfer is not on-chain, and then the transaction hash (tx-hash) field will be empty in withdraw record.</aside>
 <aside class="notice">Only support the existed addresses in your  <a href='https://www.hbg.com/en-us/withdraw_address/'>withdraw address list</a>. The once-off withdraw address of IOTA couldn't be set in the list, thus IOTA withdrawal is not supported through API. </aside>
 
 ### HTTP Request
@@ -3185,7 +3185,7 @@ Below is the response code, message and description returned by Wallet APIs.
 
 ### Q1：Why the API returns error 'api-not-support-temp-addr' when withdrawing?
 
-A：User has to include the address into the pre-defined address table on Huobi official website before withdrawing through API.
+A：User has to include the address into the pre-defined address table on New Huo official website before withdrawing through API.
 
 ### Q2：Why the API returns error 'Invaild-Address' when withdraw USDT?
 
@@ -3944,9 +3944,9 @@ endTime valid range: Unlimited<br>
 endTime default value: current time<br>
 
 Note 3:<br>
-Only when the number of items within the query window (between “startTime” and ”endTime”) exceeded the page limitation (defined by “limit”), Huobi server returns “nextId”. Once received “nextId”, API user should –<br>
+Only when the number of items within the query window (between “startTime” and ”endTime”) exceeded the page limitation (defined by “limit”), New Huo server returns “nextId”. Once received “nextId”, API user should –<br>
 1)	Be aware of that, some items within the query window were not returned due to the page size limitation.<br>
-2)	In order to get these items from Huobi server, adopt the “nextId” as “fromId” and submit another request, with other request parameters no change.<br>
+2)	In order to get these items from New Huo server, adopt the “nextId” as “fromId” and submit another request, with other request parameters no change.<br>
 3)	“nextId” and “fromId” are for recurring query purpose and the ID itself does not have any business implication.<br>
 
 > The above command returns JSON structured like this:
@@ -4965,13 +4965,13 @@ Rate Limit (NEW): 50times/2s
 This endpoint returns orders based on a specific searching criteria. The order created via API will no longer be queryable after being cancelled for more than 2 hours.
 
 
-- Upon user defined “start-time” AND/OR “end-time”, Huobi server will return historical orders whose order creation time falling into the period. The maximum query window between “start-time” and “end-time” is 48-hour. Oldest order searchable should be within recent 180 days. If either “start-time” or “end-time” is defined, Huobi server will ignore “start-date” and “end-date” regardless they were filled or not.
+- Upon user defined “start-time” AND/OR “end-time”, New Huo server will return historical orders whose order creation time falling into the period. The maximum query window between “start-time” and “end-time” is 48-hour. Oldest order searchable should be within recent 180 days. If either “start-time” or “end-time” is defined, New Huo server will ignore “start-date” and “end-date” regardless they were filled or not.
 
 - If user does neither define “start-time” nor “end-time”, but “start-date”/”end-date”, the order searching will be based on defined “date range”, as usual. The maximum query window is 2 days, and oldest order searchable should be within recent 180 days.
 
-- If user does not define any of “start-time”/”end-time”/”start-date”/”end-date”, by default Huobi server will treat current time as “end-time”, and then return historical orders within recent 48 hours.
+- If user does not define any of “start-time”/”end-time”/”start-date”/”end-date”, by default New Huo server will treat current time as “end-time”, and then return historical orders within recent 48 hours.
 
-Huobi Global suggests API users to search historical orders based on “time” filter instead of “date”. In the near future, Huobi Global would remove “start-date”/”end-date” fields from the endpoint, through another notification.
+New Huo Global suggests API users to search historical orders based on “time” filter instead of “date”. In the near future, New Huo Global would remove “start-date”/”end-date” fields from the endpoint, through another notification.
 
 
 ### HTTP Request
@@ -5424,7 +5424,7 @@ By comparing with the existing stop limit order, the newly introduced conditiona
 3)	As advanced conditional order, trailing stop order does support additional triggering condition i.e. trailing rate. Only when latest market price breaks stop price, and continues to go up (or down), and then reverts back for a certain percentage which exceeding the pre-defined "trailing rate", this order can be triggered. The valid value range of trailing rate is between 0.1% and 5%.<br>
 
 <aside class="notice">All endpoints in this section require authentication</aside>
-<aside class="notice">After the official launch of conditional order, Huobi Global might decommission the existing stop order later. This will be notified through another circular.</aside>
+<aside class="notice">After the official launch of conditional order, New Huo Global might decommission the existing stop order later. This will be notified through another circular.</aside>
 
 ## Place a conditional order
 
@@ -6118,7 +6118,7 @@ curl "https://api.huobi.pro/v1/margin/load-orders?symbol=ethusdt"
 | interest-amount    | string    | The accumulated loan interest                                |
 | interest-balance   | string    | The amount of loan interest left                             |
 | state              | string    | Loan state, possible values: created, accrual (loaned), cleared (paid), invalid |
-| paid-point         | string    | Paid Huobi Points for repayment                              |
+| paid-point         | string    | Paid New Huo Points for repayment                              |
 | paid-coin          | string    | Paid original cryptocurrency for repayment                   |
 | deduct-rate        | string    | Deduction rate for repayment                                 |
 | deduct-currency    | string    | Deduction currency for repayment                             |
@@ -7429,7 +7429,7 @@ All return data of websocket Market APIs are compressed with GZIP so they need t
 ```json
 {"ping": 1492420473027} 
 ```
-After connected to Huobi's Websocket server, the server will send heartbeat periodically (currently at 5s interval). The heartbeat message will have an integer in it, e.g.
+After connected to New Huo's Websocket server, the server will send heartbeat periodically (currently at 5s interval). The heartbeat message will have an integer in it, e.g.
 
 ```json
 {"pong": 1492420473027} 
@@ -7777,7 +7777,7 @@ Suggested downstream data processing:<br>
 7)	Once received a “size=0” at existing price level from incremental message, that price level should be removed from MBP book;<br>
 8)	If one incremental message includes updates of multiple price levels, all of those levels should be updated simultaneously in MBP book.<br>
 
-Currently Huobi Global only supports 5-level/20-level MBP incremental channel and 150-level incremental channel, the differences between them are -<br>
+Currently New Huo Global only supports 5-level/20-level MBP incremental channel and 150-level incremental channel, the differences between them are -<br>
 1) Different depth of market.<br>
 2) 5-level/20-level incremental MBP is a tick by tick feed, which means whenever there is an order book change at that level, it pushes an update; 150 levels incremental MBP feed is based on the gap between two snapshots at 100ms interval.<br>
 3) While there is single side order book update, either bid or ask, the incremental message sent from 5-level/20-level MBP feed only contains that side update. <br>
@@ -7811,7 +7811,7 @@ But the incremental message from 150 levels MBP feed contains not only that side
     }
 }
 ```
-In the near future, Huobi Global will align the update behavior of 150-level incremental channel with 5-level/20-level, which means while single side order book changed (either bid or ask), the update message will be no longer including a blank object for another side.<br>
+In the near future, New Huo Global will align the update behavior of 150-level incremental channel with 5-level/20-level, which means while single side order book changed (either bid or ask), the update message will be no longer including a blank object for another side.<br>
 4) While there is nothing change between two snapshots in past 100ms, the 150 levels incremental MBP feed still sends out a message which contains two blank objects – bids & asks. <br>
 
 ```json
@@ -7827,7 +7827,7 @@ In the near future, Huobi Global will align the update behavior of 150-level inc
 }
 ```
 But 5-level/20-level incremental channel won’t disseminate any update in such a case.<br>
-In the future, Huobi Global will align the update behavior of 150-level incremental channel with 5-level/20-level, which means while there is no order book change at all, the channel will be no longer disseminating messages of blank object any more.<br>
+In the future, New Huo Global will align the update behavior of 150-level incremental channel with 5-level/20-level, which means while there is no order book change at all, the channel will be no longer disseminating messages of blank object any more.<br>
 5) 5-level/20-level incremental channel only supports the following symbols at this stage - btcusdt,ethusdt,xrpusdt,eosusdt,ltcusdt,etcusdt,adausdt,dashusdt,bsvusdt, while 150-level incremental channel supports all symbols.<br>
 
 REQ channel supports refreshing message for 5-level, 20-level, and 150-level.
@@ -8288,7 +8288,7 @@ Unlike Market WebSocket, the return data of Account and Order Websocket are not 
 }
 ```
 
-Once the Websocket connection is established, Huobi server will periodically send "ping" message at 20s interval, with an integer inside.
+Once the Websocket connection is established, New Huo server will periodically send "ping" message at 20s interval, with an integer inside.
 
 ```json
 {
@@ -8308,7 +8308,7 @@ Once client receives "ping", it should respond "pong" message back with the same
 | sub          | Subscribe                                   |
 | req          | Request                                     |
 | ping,pong    | Heartbeat                                   |
-| push         | Push (from Huobi server to client's server) |
+| push         | Push (from New Huo server to client's server) |
 
 ### Rate Limit
 
@@ -9016,7 +9016,7 @@ Below is the error code and the description from stable coin APIs
 
 ## Introduction
 
-Huobi's platform allows clients to create ETF holdings with their matching assets, and also allows clients to redempt ETF to comprised assets.
+New Huo's platform allows clients to create ETF holdings with their matching assets, and also allows clients to redempt ETF to comprised assets.
 
 ## Creation and Redemption Configuration
 
